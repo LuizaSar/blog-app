@@ -1,0 +1,58 @@
+.header {
+   width: 100%;
+   position: sticky;
+   top: 0;
+   display: flex;
+   align-items: center;
+   background-color: #5A46FA;
+   font-family: 'Chakra Petch', sans-serif;
+   font-weight: 700;
+   color: #ffffff;
+   justify-content: center;
+   padding: 10px 20px;
+}
+.header__social-media {
+   flex:3;
+   font-size: 28px;
+}
+.header__social-media i {
+   margin-right: 10px;
+   cursor: pointer;
+   color:#e4e4e4;
+}
+
+.header__navigation{
+   flex:6;
+}
+.header__menu {
+   font-weight: 700;
+   font-size: 22px;
+   color: #ffffff;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   margin: 0;
+}
+.header_menu-item {
+   list-style: none;
+   margin-right: 20px;
+   cursor: pointer;
+}
+.header__account {
+   flex:3;
+   display:flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.header__search {
+   font-size: 28px;
+   color:#e4e4e4;
+   cursor: pointer;
+   margin-left: 15px;
+}
+.header__profile-picture img{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   object-fit: cover;
+}
