@@ -1,12 +1,12 @@
 import React from 'react'
 import './styles.css'
 
-function PostContent() {
+function Write() {
    return (
-      <div className='content'>
+      <div className='write'>
          
       </div>
    )
 }
 
-export default PostContent
+export default Write

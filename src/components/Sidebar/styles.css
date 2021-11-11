@@ -32,12 +32,12 @@
    display: flex;
    flex-wrap: wrap;
    align-items: center;
-   transition: all speed 0.2s;
 }
 .sidebar__item-list li {
    width:50%;
    margin: 10px 0;
    padding: 10px 0;
+   transition: all ease 0.3s;
 }
 .sidebar__item-list li:hover {
    background-color: #5A46FA;

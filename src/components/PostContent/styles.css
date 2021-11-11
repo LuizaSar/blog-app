@@ -1,0 +1,67 @@
+.post-content {
+   flex:9;
+   padding: 50px 20px 20px;
+   background-color: rgb(245, 245, 245);
+}
+.post-content__img img{
+   height: 500px;
+   width: 100%;
+   display: block;
+   object-fit: cover;
+   border-radius: 5px;
+}
+.post-content__title{
+   font-size: 36px;
+   font-family: 'Chakra Petch', sans-serif;
+   font-weight: 700;
+   text-align: center;
+   margin: 20px 0 20px;
+}
+.post-content__edit{
+   float: right;
+}
+.post-content__edit i{
+   font-size: 24px;
+   margin: 0px 10px ;
+}
+.post-content__edit i:first-child:hover{
+   cursor: pointer;
+   box-shadow: 0 0 15px rgb(131, 233, 118);
+   color:rgb(82, 199, 53);
+}
+.post-content__edit i:last-child:hover{
+   cursor: pointer;
+   box-shadow: 0 0 15px rgb(231, 72, 98);
+   color:rgb(211, 71, 71);
+}
+.post-content__info{
+   display: flex;
+   justify-content: space-between;
+   padding: 0 10px;
+}
+.post-content__author{
+   color:#5A46FA;
+}
+.post-content__author span{
+   color:#000000;
+}
+.post-content__date{
+   color:#5A46FA;
+}
+.post-content__date span{
+   color:#000000;
+}
+.post-content__text{
+   font-size: 18px;
+   margin: 20px 0;
+   padding: 0px 20px 20px 20px;
+}
+.post-content__text p{
+   margin: 10px 0;
+}
+.post-content__text::first-letter{
+   font-size: 36px;
+   
+   color:#5A46FA;
+   font-weight: 700;
+}
