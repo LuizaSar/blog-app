@@ -10,6 +10,7 @@
    color: #ffffff;
    justify-content: center;
    padding: 10px 20px;
+   z-index: 999;
 }
 .header__social-media {
    flex:3;

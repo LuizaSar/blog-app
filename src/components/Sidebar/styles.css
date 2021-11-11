@@ -1,0 +1,58 @@
+.sidebar {
+   flex:3;
+   padding: 20px;
+   text-align: center;
+}
+.sidebar__item {}
+
+.sidebar__item-title{
+   font-family: 'Chakra Petch', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   border-top:2px dotted #5A46FA; 
+   border-bottom:2px dotted #5A46FA;
+   padding: 5px 0;
+}
+.sidebar__item-img {
+   margin: 20px 0;
+}
+.sidebar__item-img img{
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   border-radius: 50%;
+
+}
+.sidebar__item-text{
+   margin-bottom: 20px;
+}
+.sidebar__item-list{
+   margin: 20px 0;
+   list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   transition: all speed 0.2s;
+}
+.sidebar__item-list li {
+   width:50%;
+   margin: 10px 0;
+   padding: 10px 0;
+}
+.sidebar__item-list li:hover {
+   background-color: #5A46FA;
+   color:#ffffff;
+   cursor: pointer;
+}
+.sidebar__item-icons {
+   display: flex;
+   justify-content: space-around;
+}
+.sidebar__item-icons i {
+   font-size: 28px;
+   margin-top: 20px;
+   color:#a3a1a1;
+}
+.sidebar__item-icons i:hover {
+   cursor: pointer;
+}

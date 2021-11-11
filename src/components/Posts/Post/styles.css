@@ -1,0 +1,42 @@
+.post {
+   width: 50%;
+   text-align: center;
+   padding: 15px;
+   box-shadow: 0 8px 8px -4px rgb(182, 191, 231);
+}
+.post__img{
+
+}
+.post__img img{
+   width: 450px;
+   height: 300px;
+   object-fit: cover;
+   border-radius: 5px;
+   margin: 10px 0;
+}
+.post__categories{
+   margin: 10px 0;
+}
+.post__categories span {
+   padding: 5px;
+   background-color:#b2afc2; 
+   color:#fff;
+   margin: 0 5px;
+}
+.post__content{
+   padding: 0px 20px;
+}
+.post__title{
+   font-size: 22px;
+   font-family: 'Chakra Petch', sans-serif;
+   font-weight: 700;
+   margin: 20px 0 10px;
+
+}
+.post__date{
+   color:#b2afc2
+}
+.post__text{
+text-align: left;
+margin: 10px 0;
+}
