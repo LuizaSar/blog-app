@@ -1,9 +1,12 @@
 .sidebar {
    flex:3;
-   padding: 20px;
+   padding: 20px 20px;
    text-align: center;
 }
-.sidebar__item {}
+.sidebar__items {
+   position: sticky;
+   top: 0;
+}
 
 .sidebar__item-title{
    font-family: 'Chakra Petch', sans-serif;
@@ -21,7 +24,6 @@
    height: 150px;
    object-fit: cover;
    border-radius: 50%;
-
 }
 .sidebar__item-text{
    margin-bottom: 20px;
@@ -56,3 +58,17 @@
 .sidebar__item-icons i:hover {
    cursor: pointer;
 }
+.sidebar__item-icons i:nth-child(1):hover {
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.sidebar__item-icons i:nth-child(2):hover {
+  color: #3b5998; 
+}
+.sidebar__item-icons i:nth-child(3):hover {
+   color: #00acee; 
+ }
+ .sidebar__item-icons i:nth-child(4):hover {
+   color:#0e76a8 ;  
+ }

@@ -2,10 +2,12 @@
    width: 50%;
    text-align: center;
    padding: 15px;
-   box-shadow: 0 8px 8px -4px rgb(182, 191, 231);
+   
 }
-.post__img{
-
+.post:hover {
+   transition: all ease 0.3s;
+   box-shadow: 0 8px 8px -4px rgb(182, 191, 231);
+   cursor: pointer;
 }
 .post__img img{
    width: 450px;

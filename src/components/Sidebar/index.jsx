@@ -4,6 +4,7 @@ import './styles.css'
 function Sidebar() {
    return (
       <div className="sidebar">
+         <div className='sidebar__items'>
          <div className="sidebar__item">
             <div className="sidebar__item-title">ABOUT ME</div>
             <div className="sidebar__item-img">
@@ -33,6 +34,7 @@ function Sidebar() {
             <i className="fab fa-facebook-square"></i>
             <i className="fab fa-twitter-square"></i>
             <i className="fab fa-linkedin"></i>
+            </div>
             </div>
          </div>
       </div>
