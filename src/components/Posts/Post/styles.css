@@ -4,6 +4,10 @@
    padding: 15px;
    
 }
+.post a {
+   text-decoration: none;
+   color:inherit;
+}
 .post:hover {
    transition: all ease 0.3s;
    box-shadow: 0 8px 8px -4px rgb(182, 191, 231);

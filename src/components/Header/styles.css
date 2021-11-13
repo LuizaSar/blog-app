@@ -38,6 +38,13 @@
    margin-right: 20px;
    cursor: pointer;
 }
+.header__selected {
+   text-decoration: none;
+   color: #ffffff;
+}
+.header a {
+   padding: 0 10px;
+}
 .header__account {
    flex:3;
    display:flex;

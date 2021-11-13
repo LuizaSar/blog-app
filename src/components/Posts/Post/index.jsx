@@ -1,9 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './styles.css'
 
 function Post () {
    return (
       <div className='post'>
+         <NavLink to='/post/:id'> 
          <div className="post__img">
             <img src="https://images.unsplash.com/photo-1635669390010-3adc3ea258c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80" alt="" />
          </div>
@@ -21,7 +23,9 @@ function Post () {
              contributed approximately €775 million to Germany’s GDP in 2019, supporting the equivalent 
              of 25,000 full time equivalent jobs, according to Oxford Economics...</div>
          </div>
+         </NavLink>
       </div>
+     
    )
 }
 

@@ -1,0 +1,79 @@
+.register {
+   height: calc(100vh - 65px) ;
+  background-image: url('https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+  .register__wrapper {
+     height: 100%;
+     width: 1000px;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+  }
+  .register__title{
+     font-size: 40px;
+     font-weight: 700;
+     font-family: 'Chakra Petch', sans-serif;
+     margin-bottom: 50px;
+     color:#fff;
+  }
+  .register__form input{
+     margin-bottom: 20px;
+     border: 2px solid rgb(216, 214, 214);
+     outline: none;
+     width: 300px;
+     padding: 20px;
+     font-size: 18px;
+     font-family: 'Sen', sans-serif;
+     border-radius: 5px;
+  }
+  .register__input-name{
+     padding-bottom: 5px;
+     color:#fff;
+  }
+  .register__btn {
+     display: block;
+     padding: 15px;
+     text-align: center;
+     font-size: 18px;
+     line-height: 14px;
+     background-color: #5A46FA;
+     border-radius: 5px;
+     color: #fff;
+     font-family: 'Chakra Petch', sans-serif;
+     font-weight: 700;
+     cursor: pointer;
+     margin: 0 auto;
+  }
+  .register__btn:hover {
+     box-shadow: 0 0 15px rgb(112, 98, 177);
+  }
+  .register__or{
+     margin: 15px 0;
+     color:#fff;
+  }
+  .register__login-btn {
+     display: block;
+     padding: 15px;
+     text-align: center;
+     font-size: 18px;
+     line-height: 14px;
+     background-color: #ffa600;
+     border-radius: 5px;
+     color: #fff;
+     font-family: 'Chakra Petch', sans-serif;
+     font-weight: 700;
+     cursor: pointer;
+     margin: 0 auto;
+  }
+  .register__login-btn a {
+   text-decoration: none;
+   color:#fff;
+}
+  .register__login-btn:hover {
+     box-shadow: 0 0 15px rgb(255, 205, 130);
+  }

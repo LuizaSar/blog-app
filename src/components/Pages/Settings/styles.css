@@ -1,0 +1,96 @@
+.settings {
+   display: flex;
+}
+.settings__wrapper {
+   flex:9;
+   padding: 60px 0px 60px 20px;
+}
+.settings__form {
+   width: 900px;
+   margin: 0 auto;
+}
+.settings__big-title {
+   text-align: center;
+   color: #494949;
+   font-size: 32px;
+   font-weight: 700;
+}
+.settings__delete-btn {
+   display: flex;
+   justify-content: flex-end;
+   width: 900px;
+   margin: 0 auto;
+}
+.settings__delete-btn button{
+   padding: 10px;
+   outline: none;
+   background-color: rgb(228, 95, 95);
+   color: #fff;
+   border-radius: 5px;
+   font-size: 18px;
+   font-family: 'Sen', sans-serif;
+   margin: 20px 0 30px;
+}
+.settings__delete-btn button:hover{
+   box-shadow: 0 0 15px rgb(211, 24, 24);
+   cursor: pointer;
+}
+.settings__title {
+   font-size: 22px;
+   color: #5A46FA;
+}
+.settings__form input {
+   width: 100%;
+   margin: 10px  0px 20px;
+   padding: 10px;
+   border: 3px solid #b3a9ff;
+   border-radius: 5px;
+   outline: none;
+   font-size: 22px;
+   font-family: 'Chakra Petch', sans-serif;
+   font-weight: 700;
+   color: rgb(102, 98, 98);
+}
+.settings__picture-input {
+   display: flex;
+   align-items: center;
+   padding: 10px 0;
+   border: 3px solid #b3a9ff;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px  0px 20px;
+}
+.settings__picture-input input {
+   display: none;
+}
+.settings__picture-input img {
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   display: block;
+   border-radius: 5px;
+}
+.settings__upload-btn {
+   font-size: 50px;
+   color:rgb(156, 156, 156);
+   cursor: pointer;
+   margin-right: 20px;
+}
+.settings__update-btn {
+   display: flex;
+   justify-content: center;
+}
+.settings__update-btn button{
+   padding: 10px 20px;
+   outline: none;
+   background-color: #5A46FA;
+   color: #fff;
+   border-radius: 5px;
+   font-size: 18px;
+   font-family: 'Sen', sans-serif;
+   margin: 20px 0 30px;
+}
+.settings__update-btn button:hover{
+   box-shadow: 0 0 15px rgb(56, 15, 243);
+   cursor: pointer;
+}
