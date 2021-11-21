@@ -9,7 +9,7 @@ function Write() {
    const [title, setTitle] = useState("");
    const [desc, setDesc] = useState("");
    const [file, setFile] = useState(null);
-   const username = useSelector(state=>state.authorization.username)
+   const username = useSelector(state=>state.authorization.user.username)
 
    const handleSubmitPost = (e) => {
       e.preventDefault();

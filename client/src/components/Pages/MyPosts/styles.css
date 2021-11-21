@@ -1,4 +1,7 @@
-.posts {
+.myposts {
+   display: flex;
+}
+.myposts__items {
    flex:9;
    background-color: rgb(245, 245, 245);
    display: flex;

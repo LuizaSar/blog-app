@@ -94,3 +94,8 @@
    box-shadow: 0 0 15px rgb(56, 15, 243);
    cursor: pointer;
 }
+.settings__updated {
+   text-align: center;
+   font-size: 22px;
+   color:rgb(41, 223, 81);
+}

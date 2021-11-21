@@ -1,7 +1,9 @@
 .post {
    width: 50%;
+   height: 600px;
    text-align: center;
    padding: 15px;
+   display: block;
    
 }
 .post a {
@@ -10,8 +12,7 @@
 }
 .post:hover {
    transition: all ease 0.3s;
-   box-shadow: 0 8px 8px -4px rgb(182, 191, 231);
-   cursor: pointer;
+   box-shadow:  rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .post__img img{
    width: 450px;
@@ -37,13 +38,14 @@
    font-family: 'Chakra Petch', sans-serif;
    font-weight: 700;
    margin: 20px 0 10px;
+   cursor: pointer;
 
 }
 .post__date{
    color:#b2afc2
 }
 .post__text{
-text-align: left;
+text-align: center;
 margin: 10px 0;
 display: -webkit-box;
 -webkit-line-clamp: 5;

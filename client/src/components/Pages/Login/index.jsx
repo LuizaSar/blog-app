@@ -16,8 +16,7 @@ function Login () {
       dispatch(setAuth(username, password));
   };
 
-  const [user, loading] = useSelector((state) => [
-   state.authorization.username,
+  const [loading] = useSelector((state) => [
    state.authorization.loading
  ]);
 

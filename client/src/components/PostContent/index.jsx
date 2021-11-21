@@ -8,7 +8,7 @@ import { useState } from 'react'
 function PostContent({ post }) {
 	const dispatch = useDispatch()
 	const PF = 'http://localhost:5000/images/'
-	const username = useSelector((state) => state.authorization.username)
+	const username = useSelector((state) => state.authorization.user.username)
 	const [title, setTitle] = useState('')
 	const [desc, setDesc] = useState('')
 	const [updateMode, setUpdateMode] = useState(false)

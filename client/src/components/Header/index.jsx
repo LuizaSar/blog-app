@@ -5,11 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/ducks/authorization'
 
 function Header () {
+   const PF = "http://localhost:5000/images/"
    const dispatch = useDispatch();
-    
-      const profilePic = useSelector( state => state.authorization.profilePic);
-      const user = useSelector( state => state.authorization.username);
-      
+   const user = useSelector( state => state.authorization.user);
    const handleLogout = () => {
       dispatch(logout())
    };
@@ -28,7 +26,7 @@ function Header () {
                   <NavLink to='/'  className = 'header__selected'> HOME </NavLink> 
                   </li>
                <li className='header_menu-item'>
-                  <NavLink to='/'  className = 'header__selected'> ABOUT </NavLink> 
+                  <NavLink to='/myposts'  className = 'header__selected'> MY POSTS </NavLink> 
                   </li>
                <li className='header_menu-item'>
                    <NavLink to='/'  className = 'header__selected'> CONTACT </NavLink> 
@@ -37,17 +35,17 @@ function Header () {
                     <NavLink to='/write'  className = 'header__selected'> WRITE </NavLink> 
                   </li>
                <li className='header_menu-item'>
-                  {user && 
+                  {user?.username && 
                   <NavLink to='/'  className = 'header__selected' onClick={handleLogout}> LOGOUT </NavLink> 
                   }
                   </li>
             </ul>
          </div>
          <div className='header__account'>
-            {user ? (
+            {user?.username ? (
             <div className="header__profile-picture">
                <NavLink to='/settings'  className = 'header__selected'> 
-               <img src={profilePic} alt="" />
+               <img src={PF+user.profilePic}  alt="" />
                 </NavLink> 
             </div>
             ) : 

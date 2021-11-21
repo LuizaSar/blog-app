@@ -9,10 +9,11 @@ import Settings from '../Pages/Settings'
 import Login from '../Pages/Login'
 import Register from '../Pages/Register'
 import { Route, Routes } from 'react-router-dom';
+import MyPosts from '../Pages/MyPosts'
 
 function App () {
    
-const user = useSelector(state => state.authorization.username)
+const user = useSelector(state => state.authorization.user)
 
 console.log(user)
    return (
@@ -20,10 +21,11 @@ console.log(user)
          <Header/>
          <Routes>
          <Route exact path='/' element={<Home/>} />
-         <Route exact path='/register' element={user ? <Home/> : <Register/> } />
-         <Route exact path='/login' element={user ? <Home/> : <Login/> }/>
-         <Route exact path='/write' element={user ? <Write/> : <Register/> } />
-         <Route exact path='/settings' element={user ? <Settings/> : <Register/> } />
+         <Route exact path='/register' element={user?.username ? <Home/> : <Register/> } />
+         <Route exact path='/login' element={user?.username ? <Home/> : <Login/> }/>
+         <Route exact path='/write' element={user?.username ? <Write/> : <Register/> } />
+         <Route exact path='/myposts' element={user?.username ? <MyPosts/> : <Register/> } />
+         <Route exact path='/settings' element={user?.username ? <Settings/> : <Register/> } />
          <Route exact path='/post/:id' element={<Content/>} />
          </Routes>
       </div>
