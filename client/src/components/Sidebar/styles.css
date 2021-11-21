@@ -1,6 +1,6 @@
 .sidebar {
    flex:3;
-   padding: 20px 20px;
+   padding: 50px 20px;
    text-align: center;
 }
 .sidebar__items {
@@ -28,14 +28,16 @@
 .sidebar__item-text{
    margin-bottom: 20px;
 }
-.sidebar__item-list{
+
+.sidebar__item-list {
    margin: 20px 0;
    list-style: none;
    display: flex;
    flex-wrap: wrap;
    align-items: center;
+   text-decoration: none;
 }
-.sidebar__item-list li {
+.sidebar__item-list li{
    width:50%;
    margin: 10px 0;
    padding: 10px 0;
@@ -45,6 +47,10 @@
    background-color: #5A46FA;
    color:#ffffff;
    cursor: pointer;
+}
+.sidebar__item-list li a {
+   text-decoration: none;
+   color:inherit;
 }
 .sidebar__item-icons {
    display: flex;

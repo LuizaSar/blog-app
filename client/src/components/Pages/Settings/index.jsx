@@ -1,8 +1,11 @@
 import React from 'react'
 import Sidebar from '../../Sidebar'
 import './styles.css'
+import { useDispatch, useSelector } from 'react-redux';
 
 function Settings() {
+   const user = useSelector( state => state.authorization.user);
+   
 	return (
 		<div className="settings">
 			<div className="settings__wrapper">
@@ -18,16 +21,24 @@ function Settings() {
 						</label>
 						<input type="file" id="file-input" />
 						<img
-							src="https://images.unsplash.com/photo-1580337455351-50ca07433efd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80"
+							src={user.profilePic}
 							alt=""
 						/>
 					</div>
 					<div className="settings__title">Username</div>
-					<input type="text" placeholder="Melissa" />
+					<input 
+               type="text" 
+               placeholder={user.username}
+               />
 					<div className="settings__title">Email</div>
-					<input type="text" placeholder="Melissa@gmail.com" />
+					<input 
+               type="text" 
+               placeholder={user.email}
+               />
 					<div className="settings__title">Password</div>
-					<input type="text" placeholder="Melissa66" />
+					<input
+                type="text" 
+                />
                <div className="settings__update-btn">
 					<button>Update</button>
 				</div>

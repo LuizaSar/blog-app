@@ -1,7 +1,19 @@
 import React from 'react'
 import './styles.css'
+import { useEffect} from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import {fetchCategories} from '../../redux/ducks/categories'
+import { Link } from 'react-router-dom'
+
 
 function Sidebar() {
+   const dispatch = useDispatch();
+   const categories = useSelector(state => state.categories.items);
+   
+  useEffect(() => {
+   dispatch(fetchCategories());
+ }, []);
+
    return (
       <div className="sidebar">
          <div className='sidebar__items'>
@@ -19,12 +31,15 @@ function Sidebar() {
          <div className="sidebar__item">
             <div className="sidebar__item-title">CATEGORIES</div>
             <ul className="sidebar__item-list">
-               <li>AI</li>
-               <li>UX / UI</li>
-               <li>Digital</li>
-               <li>Career</li>
-               <li>News</li>
-               <li>Security</li>
+               {categories.map((category, key)=>{
+                  return (
+                     <li key={key}> 
+                     <Link to={`/?category=${category.name}`} > 
+                     {category.name} 
+                  </Link>
+                  </li>
+                  )
+               })}
             </ul>
          </div>
          <div className="sidebar__item">

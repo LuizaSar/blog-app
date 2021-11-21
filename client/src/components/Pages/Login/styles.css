@@ -52,6 +52,10 @@ background-image: url('https://images.unsplash.com/photo-1622180203374-9524a54b7
 .login__btn:hover {
    box-shadow: 0 0 15px rgb(112, 98, 177);
 }
+.login__btn:disabled {
+   cursor: not-allowed;
+   background-color: rgb(195, 202, 221);
+}
 .login__or{
    margin: 15px 0;
    color:#fff;

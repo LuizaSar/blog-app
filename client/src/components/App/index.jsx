@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Header from '../Header'
 import Home from '../Pages/Home/index'
 import '../../index'
@@ -11,8 +12,9 @@ import { Route, Routes } from 'react-router-dom';
 
 function App () {
    
-   const user = true;
+const user = useSelector(state => state.authorization.username)
 
+console.log(user)
    return (
       <div className='container'>
          <Header/>

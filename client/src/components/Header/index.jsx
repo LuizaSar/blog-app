@@ -1,10 +1,18 @@
 import React from 'react'
 import  "./styles.css"
 import {NavLink} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../redux/ducks/authorization'
 
 function Header () {
-
-const user = true;
+   const dispatch = useDispatch();
+    
+      const profilePic = useSelector( state => state.authorization.profilePic);
+      const user = useSelector( state => state.authorization.username);
+      
+   const handleLogout = () => {
+      dispatch(logout())
+   };
 
    return (
       <div className="header">
@@ -30,7 +38,7 @@ const user = true;
                   </li>
                <li className='header_menu-item'>
                   {user && 
-                  <NavLink to='/'  className = 'header__selected'> LOGOUT </NavLink> 
+                  <NavLink to='/'  className = 'header__selected' onClick={handleLogout}> LOGOUT </NavLink> 
                   }
                   </li>
             </ul>
@@ -39,7 +47,7 @@ const user = true;
             {user ? (
             <div className="header__profile-picture">
                <NavLink to='/settings'  className = 'header__selected'> 
-               <img src="https://images.unsplash.com/photo-1580337455351-50ca07433efd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" alt="" />
+               <img src={profilePic} alt="" />
                 </NavLink> 
             </div>
             ) : 

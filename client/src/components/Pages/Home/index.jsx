@@ -2,14 +2,26 @@ import React from 'react';
 import Posts from '../../Posts';
 import Hero from '../../Hero/index'
 import Sidebar from '../../Sidebar';
-import './styles.css'
+import './styles.css';
+import { useEffect} from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import {fetchPosts} from '../../../redux/ducks/posts.js'
+import { useLocation } from "react-router";
 
 function Home() {
+  const dispatch = useDispatch();
+  const posts = useSelector(state => state.posts.items);
+  const { search } = useLocation();
+
+  useEffect(() => {
+   dispatch(fetchPosts(search));
+ }, [search]);
+
    return (
       <div>
          <Hero/>
          <div className='home'>
-         <Posts/>
+         <Posts posts={posts}/>
          <Sidebar/>
          </div>
       </div>

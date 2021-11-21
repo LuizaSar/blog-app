@@ -7,9 +7,11 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require('multer');
+const path = require("path");
 
 dotenv.config()
 app.use(express.json())
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 
 mongoose
@@ -22,7 +24,7 @@ mongoose
      cb(null, "images");
    },
    filename: (req, file, cb) => {
-     cb(null, "lolz.jpg");
+     cb(null, req.body.name);
    },
  });
 
