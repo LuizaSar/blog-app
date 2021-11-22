@@ -29,7 +29,7 @@ function Header () {
                   <NavLink to='/myposts'  className = 'header__selected'> MY POSTS </NavLink> 
                   </li>
                <li className='header_menu-item'>
-                   <NavLink to='/'  className = 'header__selected'> CONTACT </NavLink> 
+                   <NavLink to='/contact'  className = 'header__selected'> CONTACT </NavLink> 
                   </li>
                <li className='header_menu-item'>
                     <NavLink to='/write'  className = 'header__selected'> WRITE </NavLink> 

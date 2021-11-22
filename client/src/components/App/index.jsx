@@ -10,6 +10,7 @@ import Login from '../Pages/Login'
 import Register from '../Pages/Register'
 import { Route, Routes } from 'react-router-dom';
 import MyPosts from '../Pages/MyPosts'
+import Contact from '../Pages/Contact'
 
 function App () {
    
@@ -27,6 +28,7 @@ console.log(user)
          <Route exact path='/myposts' element={user?.username ? <MyPosts/> : <Register/> } />
          <Route exact path='/settings' element={user?.username ? <Settings/> : <Register/> } />
          <Route exact path='/post/:id' element={<Content/>} />
+         <Route exact path='/contact' element={<Contact/>} />
          </Routes>
       </div>
    )

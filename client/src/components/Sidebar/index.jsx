@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+import image from '../assets/images/sidebar-img.jpeg'
 import { useEffect} from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchCategories} from '../../redux/ducks/categories'
@@ -9,6 +10,8 @@ import { Link } from 'react-router-dom'
 function Sidebar() {
    const dispatch = useDispatch();
    const categories = useSelector(state => state.categories.items);
+   const user = useSelector(state => state.authorization.user)
+   const PF = "http://localhost:5000/images/";
    
   useEffect(() => {
    dispatch(fetchCategories());
@@ -17,17 +20,21 @@ function Sidebar() {
    return (
       <div className="sidebar">
          <div className='sidebar__items'>
-         <div className="sidebar__item">
-            <div className="sidebar__item-title">ABOUT ME</div>
-            <div className="sidebar__item-img">
-               <img src="https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1008&q=80" alt="" />
+            {user.username ? (
+                <div className="sidebar__item">
+               <div className="sidebar__item-title">{user.username}</div>
+               <div className="sidebar__item-img">
+               <img src={PF + user.profilePic} alt="" />
             </div>
-            <div className="sidebar__item-text">
-            I'm Melissa Fenster, CTO at Cosmo Consult.
-            I'm a technology enthusiast, working mainly on Microsoft Dynamics 365, Azure and Docker. 
-            Always trying to push the limits.
             </div>
-         </div>
+            ) :
+            <div className="sidebar__item">
+               <div className="sidebar__item-title">TECH BLOG</div>
+               <div className="sidebar__item-img">
+               <img src={image} alt="" />
+            </div>
+            </div>
+            }
          <div className="sidebar__item">
             <div className="sidebar__item-title">CATEGORIES</div>
             <ul className="sidebar__item-list">
@@ -43,7 +50,7 @@ function Sidebar() {
             </ul>
          </div>
          <div className="sidebar__item">
-            <div className="sidebar__item-title">FOLLOW ME</div>
+            <div className="sidebar__item-title">FOLLOW US</div>
             <div className="sidebar__item-icons">
             <i className="fab fa-instagram-square"></i>
             <i className="fab fa-facebook-square"></i>

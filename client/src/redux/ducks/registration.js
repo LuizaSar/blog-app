@@ -6,6 +6,7 @@ const initialState = {
    email:"",
    loading:false,
    error:false,
+   errorMessage:''
 };
 
 export default function registration (state = initialState, action) {
@@ -13,7 +14,8 @@ export default function registration (state = initialState, action) {
       case 'registration/start':
          return {
             ...state,
-            loading:true
+            loading:true,
+            error:false
          };
       case 'registration/success':
          return {
@@ -21,13 +23,15 @@ export default function registration (state = initialState, action) {
             username:action.payload.username,
             email:action.payload.email,
             password:action.payload.password,
-            loading:false
+            loading:false,
+            error:false
          };
          case 'registration/failure':
          return {
             ...state,
             error:true,
-            loading:false
+            loading:false,
+            errorMessage:action.payload
          };
       default:
          return state;
@@ -50,11 +54,11 @@ export const register =  (username, password, email) => {
                payload:response.data
             })
          })
-          
          .catch(error=>{
+            console.log(error.response)
             dispatch({
                type:"registration/failure",
-               payload:error
+               payload:error.response.data
             })
          }) 
    }}

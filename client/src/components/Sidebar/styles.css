@@ -1,13 +1,15 @@
 .sidebar {
    flex:3;
-   padding: 50px 20px;
+   padding: 10px 20px 0px;
    text-align: center;
 }
 .sidebar__items {
+   min-height: 500px;
+   overflow: auto;
+   position: -webkit-sticky;
    position: sticky;
-   top: 0;
+   top: 20%;
 }
-
 .sidebar__item-title{
    font-family: 'Chakra Petch', sans-serif;
    font-size: 20px;
@@ -46,11 +48,11 @@
 .sidebar__item-list li:hover {
    background-color: #5A46FA;
    color:#ffffff;
-   cursor: pointer;
 }
 .sidebar__item-list li a {
    text-decoration: none;
    color:inherit;
+   cursor: pointer;
 }
 .sidebar__item-icons {
    display: flex;

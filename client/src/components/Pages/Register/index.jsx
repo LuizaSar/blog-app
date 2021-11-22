@@ -15,15 +15,25 @@ function Register () {
      e.preventDefault();
      dispatch(register(username, password, email));
  };
- const error = useSelector(state => state.registration.error)
- const newUserName = useSelector(state => state.registration.username)
- newUserName && window.location.replace("/login")
+    const [error, errorMessage, newUserName] = useSelector((state) => [
+      state.registration.error,
+      state.registration.errorMessage,
+      state.registration.username
+    ]);
+
+   newUserName && window.location.replace("/login")
 
    return (
       <div className='register'>
          <div className="register__wrapper">
           <div className="register__title">Register</div>
-          {error && <div className="register__error"> That username is taken. Try another </div>}
+          {error && (
+             <div className="register__error">Something went wrong.</div> 
+               
+          )}
+          {errorMessage && (
+             <div className="register__error">{errorMessage}</div> 
+          )}
          <form className="register__form" onSubmit={handleRegister}>
             <div className="register__input-name">Email</div>
             <input 

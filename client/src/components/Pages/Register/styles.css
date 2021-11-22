@@ -1,6 +1,6 @@
 .register {
-   height: calc(100vh - 65px) ;
-  background-image: url('https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+   height: calc(100vh - 55px) ;
+   background-image: url('https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -18,14 +18,8 @@
      font-size: 40px;
      font-weight: 700;
      font-family: 'Chakra Petch', sans-serif;
-     margin-bottom: 30px;
+     margin-bottom: 20px;
      color:#fff;
-  }
-  .register__error {
-     color:rgb(250, 0, 0);
-     font-size: 18px;
-     text-align: center;
-     padding: 30px 0;
   }
   .register__form input{
      margin-bottom: 20px;
@@ -83,3 +77,10 @@
   .register__login-btn:hover {
      box-shadow: 0 0 15px rgb(255, 205, 130);
   }
+  .register__error {
+   color:rgb(150, 22, 71);
+   font-weight: 700;
+   text-align: center;
+   font-size: 22px;
+   margin-bottom: 10px;
+}

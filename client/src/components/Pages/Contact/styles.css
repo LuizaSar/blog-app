@@ -1,0 +1,68 @@
+.contact {
+   width: 900px;
+   margin: 0 auto;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:center;
+   height: calc(100vh - 55px)
+}
+.contact__item-img {
+   margin: 0px 0 50px;
+}
+.contact__item-img img{
+   width: 300px;
+   height: 300px;
+   object-fit: cover;
+   border-radius: 50%;
+}
+.contact__item-follow{
+   font-family: 'Chakra Petch', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   border-top:2px dotted #5A46FA; 
+   border-bottom:2px dotted #5A46FA;
+   padding: 5px 0;
+}
+.contact__item-email{
+   font-family: 'Chakra Petch', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   border-top:2px dotted #5A46FA; 
+   border-bottom:2px dotted #5A46FA;
+   padding: 5px 0;
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 20px;
+}
+.contact__item {
+   text-align: center;
+   margin: 0 auto;
+   width: 100%;
+}
+.contact__item-icons {
+   display: flex;
+   justify-content: space-around;
+}
+.contact__item-icons i {
+   font-size: 48px;
+   margin-top: 20px;
+   color:#a3a1a1;
+}
+.contact__item-icons i:hover {
+   cursor: pointer;
+}
+.contact__item-icons i:nth-child(1):hover {
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.contact__item-icons i:nth-child(2):hover {
+  color: #3b5998; 
+}
+.contact__item-icons i:nth-child(3):hover {
+   color: #00acee; 
+ }
+ .contact__item-icons i:nth-child(4):hover {
+   color:#0e76a8 ;  
+ }

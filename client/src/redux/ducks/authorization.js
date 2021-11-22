@@ -20,7 +20,8 @@ export default function authorization (state = initialState, action) {
             ...state,
             user:action.payload,
             loading:false,
-            profilePic:action.payload.profilePic
+            profilePic:action.payload.profilePic,
+            error:false
          };
          case 'login/failure':
          return {
