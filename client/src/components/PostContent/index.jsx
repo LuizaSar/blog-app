@@ -8,7 +8,6 @@ import { useState } from 'react'
 function PostContent({ post }) {
 	const dispatch = useDispatch()
 	const PF = 'http://localhost:5000/images/'
-	const username = useSelector((state) => state.authorization.user.username)
 	const [title, setTitle] = useState('')
 	const [desc, setDesc] = useState('')
 	const [updateMode, setUpdateMode] = useState(false)
@@ -24,6 +23,11 @@ function PostContent({ post }) {
    const handleUpdate = () => {
 		dispatch(updatePost(title, desc, username, post))
 	}
+
+   const [username, postLoading] = useSelector((state) => [
+      state.authorization.user.username,
+      state.posts.loading,
+    ]);
 
 	return (
 		<div className="post-content">

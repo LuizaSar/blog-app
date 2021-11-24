@@ -14,7 +14,7 @@ function Post ({post}) {
          )}
          <div className="post__categories">
             {post.categories.map((category, key) => {
-               return <span key={key}>{category}</span>
+               return <span key={key}>{category.name}</span>
             }
           ) }
          </div>

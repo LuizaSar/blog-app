@@ -5,6 +5,7 @@ const initialState = {
    item:{},
    loading:false,
    file:null,
+   search:''
 };
 
 export default function posts (state = initialState, action) {
@@ -31,6 +32,11 @@ export default function posts (state = initialState, action) {
             item:action.payload,
             loading:false
          };
+         case 'posts/search/set':
+            return {
+              ...state,
+              search: action.payload,
+            };
       default:
          return state;
    }
@@ -79,11 +85,12 @@ export const fetchPost =  (path) => {
          }) 
    }}
 
-   export const submitPost =  (username, title, desc, file) => {
+   export const submitPost =  (username, title, desc, file, categories) => {
          const newPost = {
                username,
                title,
-               desc
+               desc,
+               categories
          }
       return async (dispatch) => {
          dispatch({
@@ -162,3 +169,10 @@ export const fetchPost =  (path) => {
                   })
                })
          }}
+
+         export function setSearchPosts(text) {
+            return {
+              type: 'posts/search/set',
+              payload: text,
+            };
+          }

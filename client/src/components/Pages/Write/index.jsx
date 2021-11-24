@@ -1,7 +1,9 @@
 import React from 'react'
 import {useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { submitPost, uploadFile } from '../../../redux/ducks/posts';
+import { useEffect} from "react";
+import { submitPost} from '../../../redux/ducks/posts';
+import {fetchCategories, addCategory, removeCategory} from '../../../redux/ducks/categories.js'
 import './styles.css'
 
 function Write() {
@@ -10,11 +12,28 @@ function Write() {
    const [desc, setDesc] = useState("");
    const [file, setFile] = useState(null);
    const username = useSelector(state=>state.authorization.user.username)
+   const categories = useSelector(state=>state.categories.items)
+   const selectedCategories = useSelector(state => state.categories.selectedItems)
+  
+   useEffect(() => {
+      dispatch(fetchCategories())
+      return () => {    
+      };
+    }, []);
 
    const handleSubmitPost = (e) => {
       e.preventDefault();
-      dispatch(submitPost(username, title, desc, file))
+      dispatch(submitPost(username, title, desc, file, selectedCategories))
       };
+
+      const handleAddCategory = (item) => {
+         dispatch(addCategory(item))
+        };
+         const handleRemoveCategory = (item) => {
+         dispatch(removeCategory(item))
+       };
+
+     
 
    return (
       <div className='write'>
@@ -44,6 +63,14 @@ function Write() {
             onChange={e=>setTitle(e.target.value)}
             />
             <button className='write__btn' type="submit">Publish</button>
+         </div>
+         <div className="write__categories">
+         {selectedCategories && selectedCategories.map((item, key)=>{
+               return <span className="write__selected-category" onClick={() => handleRemoveCategory(item)}>{item.name}</span>
+            })}
+            {categories && categories.map((item, key)=>{
+               return <span className="write__category" onClick={() => handleAddCategory(item)}>{item.name}</span>
+            })}  
          </div>
          <div className="write__text-form">
             <textarea 

@@ -19,7 +19,7 @@ function Contact() {
             </div>
             <div className="contact__item">
             <div className="contact__item-email">For business inquiries:</div>
-               techblog@gmail.com
+              <span> techblog@gmail.com </span>
                </div>
       </div>
 

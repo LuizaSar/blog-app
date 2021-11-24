@@ -1,3 +1,9 @@
 .home {
    display: flex;
 }
+.home__loading {
+   font-family: 'Chakra Petch', sans-serif;
+   margin: 50px auto;
+   font-size: 50px;
+   font-weight: 700;
+}

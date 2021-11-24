@@ -35,6 +35,10 @@
    margin-top: 50px;
    margin-bottom: 20px;
 }
+.contact__item span {
+   color:rgb(105, 103, 103);
+   font-size: 18px;
+}
 .contact__item {
    text-align: center;
    margin: 0 auto;

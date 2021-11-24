@@ -11,17 +11,26 @@ function Content() {
 	const dispatch = useDispatch()
 	const location = useLocation()
 	const path = location.pathname.split('/')[2]
-	const post = useSelector((state) => state.posts.item)
+	const [post, postLoading] = useSelector((state) => [
+		state.posts.item,
+		state.posts.loading,
+	])
 
 	useEffect(() => {
-      window.scroll(0, 0);
+		window.scroll(0, 0)
 		dispatch(fetchPost(path))
 	}, [path])
 
 	return (
 		<div className="content">
-			<PostContent post={post}/>
-			<Sidebar />
+			{postLoading ? (
+				<div className="content__loading">Loading...</div>
+			) : (
+				<>
+					<PostContent post={post} />
+					<Sidebar />
+				</>
+			)}
 		</div>
 	)
 }

@@ -10,7 +10,12 @@ import { useLocation } from "react-router";
 
 function Home() {
   const dispatch = useDispatch();
-  const posts = useSelector(state => state.posts.items);
+
+  const [posts, postsLoading, categoriesLoading] = useSelector((state) => [
+   state.posts.items,
+   state.posts.loading,
+   state.categories.loading,
+ ]);
   const { search } = useLocation();
 
   useEffect(() => {
@@ -21,8 +26,12 @@ function Home() {
       <div>
          <Hero/>
          <div className='home'>
-         <Posts posts={posts}/>
-         <Sidebar/>
+            {postsLoading && categoriesLoading ? <div className='home__loading'>Loading...</div> : 
+            <>
+             <Posts posts={posts}/>
+             <Sidebar/>
+             </>
+         }
          </div>
       </div>
    )

@@ -17,6 +17,22 @@
    align-items: center;
    margin-bottom: 50px;
 }
+.write__categories{
+   margin: 0px 0 40px;
+   text-align: center;
+}
+.write__categories span {
+   padding: 5px;
+   color:#fff;
+   margin: 0 5px;
+   cursor:pointer
+}
+.write__selected-category {
+   background-color: rgb(27, 31, 238);
+}
+.write__category {
+   background-color:#b2afc2; 
+}
 .write__img-icon {
    font-size: 36px;
    cursor: pointer;
