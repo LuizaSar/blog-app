@@ -12,22 +12,22 @@ function PostContent({ post }) {
 	const [desc, setDesc] = useState('')
 	const [updateMode, setUpdateMode] = useState(false)
 
-   const changeUpdateMode = () => {
-      setUpdateMode(true);
-      setDesc(post.desc);
-      setTitle(post.title)
-   }
+	const changeUpdateMode = () => {
+		setUpdateMode(true)
+		setDesc(post.desc)
+		setTitle(post.title)
+	}
 	const handleDelete = () => {
 		dispatch(deletePost(post, username))
 	}
-   const handleUpdate = () => {
+	const handleUpdate = () => {
 		dispatch(updatePost(title, desc, username, post))
 	}
 
-   const [username, postLoading] = useSelector((state) => [
-      state.authorization.user.username,
-      state.posts.loading,
-    ]);
+	const [username, postLoading] = useSelector((state) => [
+		state.authorization.user.username,
+		state.posts.loading,
+	])
 
 	return (
 		<div className="post-content">
@@ -39,7 +39,7 @@ function PostContent({ post }) {
 			{updateMode ? (
 				<input
 					className="update__input-title"
-               value={title}
+					value={title}
 					type="text"
 					autoFocus={true}
 					onChange={(e) => setTitle(e.target.value)}
@@ -67,14 +67,16 @@ function PostContent({ post }) {
 				</div>
 			</div>
 			{updateMode ? (
-            <>
-				<textarea
-					className="update__text-input"
-               value={desc}
-					onChange={(e) => setDesc(e.target.value)}
-				></textarea>
-            <button className='update__btn' onClick={handleUpdate}>Update</button>
-            </>
+				<>
+					<textarea
+						className="update__text-input"
+						value={desc}
+						onChange={(e) => setDesc(e.target.value)}
+					></textarea>
+					<button className="update__btn" onClick={handleUpdate}>
+						Update
+					</button>
+				</>
 			) : (
 				<div className="post-content__text">{post.desc}</div>
 			)}

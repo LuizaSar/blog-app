@@ -7,5 +7,10 @@
    display: flex;
    flex-wrap: wrap;
    padding: 20px 10px;
-   
+}
+.myposts__error {
+   font-family: 'Chakra Petch', sans-serif;
+   margin: 50px auto;
+   font-size: 50px;
+   font-weight: 700;
 }

@@ -5,7 +5,8 @@
    flex-direction: column;
    justify-content: center;
    align-items:center;
-   height: calc(100vh - 55px)
+   padding: 100px 0px;
+   height: 100vh;
 }
 .contact__item-img {
    margin: 0px 0 50px;

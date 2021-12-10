@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 import Post from './Post'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 function Posts({ posts }) {
 	const [search] = useSelector((state) => [state.posts.search])

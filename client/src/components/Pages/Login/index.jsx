@@ -15,25 +15,26 @@ function Login() {
 		dispatch(setAuth(username, password))
 	}
 
-   const [error, loading] = useSelector((state) => [
-      state.authorization.error,
-      state.authorization.loading
-    ]);
+	const [error, loading] = useSelector((state) => [
+		state.authorization.error,
+		state.authorization.loading,
+	])
 
 	return (
 		<div className="login">
 			<div className="login__wrapper">
 				<div className="login__title">Login</div>
-            {error && (
-               <div className="login__error">
-					<p>Incorrect username or password.</p>
-					<p>Try again.</p>
-				</div>
-            )}
+				{error && (
+					<div className="login__error">
+						<p>Incorrect username or password.</p>
+						<p>Try again.</p>
+					</div>
+				)}
 				<form className="login__form" onSubmit={handleLogin}>
 					<div className="login__input-name">Username</div>
 					<input
 						type="text"
+						required
 						placeholder="Enter your Username"
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
@@ -41,6 +42,7 @@ function Login() {
 					<div className="login__input-name">Password</div>
 					<input
 						type="text"
+						required
 						placeholder="Enter your Password"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}

@@ -4,21 +4,23 @@ import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../redux/ducks/authorization'
 import { setSearchPosts } from '../../redux/ducks/posts'
+import image from '../assets/images/blank-profile-picture-973460_1280.png'
 
 function Header() {
 	const PF = 'http://localhost:5000/images/'
 	const dispatch = useDispatch()
-	const user = useSelector((state) => state.authorization.user)
 	const handleLogout = () => {
 		dispatch(logout())
 	}
 
-	const search = useSelector((state) => {
-		return state.posts.search
-	})
 	const handleSearch = (event) => {
 		dispatch(setSearchPosts(event.target.value))
 	}
+
+	const [user, search] = useSelector((state) => [
+		state.authorization.user,
+		state.posts.search,
+	])
 
 	return (
 		<div className="header">
@@ -75,7 +77,11 @@ function Header() {
 				{user?.username ? (
 					<div className="header__profile-picture">
 						<NavLink to="/settings" className="header__selected">
-							<img src={PF + user.profilePic} alt="" />
+							{user?.profilePic ? (
+								<img src={PF + user.profilePic} alt="" />
+							) : (
+								<img src={image} alt="" />
+							)}
 						</NavLink>
 					</div>
 				) : (
