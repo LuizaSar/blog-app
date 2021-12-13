@@ -2,7 +2,7 @@
 
 ### Запуск приложения:
 
-`git clone https://github.com/intocode/career-week`
+`git clone https://github.com/LuizaSar/blog-app`
 
 Для локального запуска необходимо набрать следующую команду в терминале:
 
